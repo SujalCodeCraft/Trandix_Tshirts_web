@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- title -->
+        <title>Trandix T-Shirts</title>
+        <!-- bootstrap css  -->
+        <link rel="stylesheet" href="assets/css/bootstrap.css">
+        <!-- main css -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- favicon -->
+        <link rel="icon" href="assets/img/Favicon-1.png">
+        <!-- bootstrap icon cdn -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- font awesome icon -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+        <!-- owl min css -->
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <!-- owl theme css -->
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    </head>
+    <body>
+        <!-- header start -->
+        <header class="main_header">
+            <nav class="main_nav">
+                <div class="nav_leftside">
+                    <ul>
+                        <li><a href="Mans.html">Mans </a></li>
+                         <li><a href="womens.html">Womens </a></li>
+                        <li><a href="#">Latest </a></li>
+                        <li><a href="#">About us </a></li>
+                        <li><a href="#">Contact us </a></li>
+                    </ul>
+                </div>
+               <div class="nav_middle">
+                    <a href="index.html"><img src="assets/img/logo-2.png" class="img-fluid" alt></a>
+                </div>
+                <div class="nav_rightside">
+                    <ul>
+                        <li><input type="text"
+                                placeholder="Enter Relevent Keyword"></li>
+                        <li><a href="#"><i
+                                    class="bi bi-person-circle"></i></a></li>
+                        <li><a href="#"><i class="bi bi-heart"></i></a></li>
+                        <li><a href="#"><i class="bi bi-bag"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- header end  -->
+
+        <!-- hero section -->
+        <!-- <section class="hero__">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 p-0">
+                        <div class="home_main_sliders">
+                            <div id="carouselExampleSlidesOnly"
+                                class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="assets/img/slider-img/1.png"
+                                            class="d-block w-100 img-fluid"
+                                            alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/img/slider-img/2.png"
+                                            class="d-block w-100 img-fluid"
+                                            alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/img/slider-img/3.png"
+                                            class="d-block w-100 img-fluid"
+                                            alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/img/slider-img/4.png"
+                                            class="d-block w-100 img-fluid"
+                                            alt="...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section> -->
+        <!-- hero end  -->
+
+        <!-- main product listing page -->
+        <section class="product__lsiting">
+            <div class="container">
+                <div class="product__list_main">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="product_list_left">
+                                <div class="ls_heading ls__sub_box">
+                                    <h5>Filter by</h5>
+                                </div>
+                                <!-- Category Filter -->
+                                <div class="ls_gender_box ls__sub_box">
+                                    <h6 class="ls_box_heading">Category</h6>
+                                    <ul>
+                                        <li><input type="checkbox" id="male">
+                                            <label for="male">Male</label></li>
+                                        <li><input type="checkbox" id="female">
+                                            <label
+                                                for="female">Female</label></li>
+                                        <li><input type="checkbox"
+                                                id="universal"> <label
+                                                for="universal">Universal</label></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Price Filter -->
+                                <div class="ls_price_box ls__sub_box">
+                                    <h6 class="ls_box_heading">Price Range</h6>
+                                    <div class="price-slider">
+                                        <input type="range" id="priceRangeMin"
+                                            min="0" max="5000" step="100"
+                                            value="500"
+                                            oninput="updatePrice(this.value, 'min')">
+                                        <input type="range" id="priceRangeMax"
+                                            min="0" max="5000" step="100"
+                                            value="2000"
+                                            oninput="updatePrice(this.value, 'max')">
+                                    </div>
+                                    <div class="price-inputs">
+                                        <label for="priceMin">Min: ₹</label>
+                                        <input type="number" id="priceMin"
+                                            min="0" max="5000" value="500"
+                                            oninput="updateSlider(this.value, 'min')">
+
+                                        <label for="priceMax">Max: ₹</label>
+                                        <input type="number" id="priceMax"
+                                            min="0" max="5000" value="2000"
+                                            oninput="updateSlider(this.value, 'max')">
+                                    </div>
+                                </div>
+
+                                <!-- Size Filter -->
+                                <div class="ls_size_box ls__sub_box">
+                                    <h6 class="ls_box_heading">Size</h6>
+                                    <ul>
+                                        <li><input type="checkbox" id="xs">
+                                            <label for="xs">XS</label></li>
+                                        <li><input type="checkbox" id="s">
+                                            <label for="s">S</label></li>
+                                        <li><input type="checkbox" id="m">
+                                            <label for="m">M</label></li>
+                                        <li><input type="checkbox" id="l">
+                                            <label for="l">L</label></li>
+                                        <li><input type="checkbox" id="xl">
+                                            <label for="xl">XL</label></li>
+                                        <li><input type="checkbox" id="xxl">
+                                            <label for="xxl">XXL</label></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Color Filter -->
+                                <div class="ls_color_box ls__sub_box">
+                                    <h6 class="ls_box_heading">Color</h6>
+                                    <ul>
+                                        <li><input type="checkbox" id="black">
+                                            <label
+                                                for="black">Black</label></li>
+                                        <li><input type="checkbox" id="white">
+                                            <label
+                                                for="white">White</label></li>
+                                        <li><input type="checkbox" id="red">
+                                            <label for="red">Red</label></li>
+                                        <li><input type="checkbox" id="blue">
+                                            <label for="blue">Blue</label></li>
+                                        <li><input type="checkbox" id="green">
+                                            <label
+                                                for="green">Green</label></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Material Filter -->
+                                <div class="ls_material_box ls__sub_box">
+                                    <h6 class="ls_box_heading">Material</h6>
+                                    <ul>
+                                        <li><input type="checkbox" id="cotton">
+                                            <label
+                                                for="cotton">Cotton</label></li>
+                                        <li><input type="checkbox"
+                                                id="polyester"> <label
+                                                for="polyester">Polyester</label></li>
+                                        <li><input type="checkbox" id="blended">
+                                            <label for="blended">Blended
+                                                Fabrics</label></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Sleeve Length Filter -->
+                                <div class="ls_sleeve_box ls__sub_box">
+                                    <h6 class="ls_box_heading">Sleeve
+                                        Length</h6>
+                                    <ul>
+                                        <li><input type="checkbox"
+                                                id="short_sleeve"> <label
+                                                for="short_sleeve">Short
+                                                Sleeve</label></li>
+                                        <li><input type="checkbox"
+                                                id="long_sleeve"> <label
+                                                for="long_sleeve">Long
+                                                Sleeve</label></li>
+                                        <li><input type="checkbox"
+                                                id="sleeveless"> <label
+                                                for="sleeveless">Sleeveless</label></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Neck Style Filter -->
+                                <div class="ls_neck_style_box ls__sub_box">
+                                    <h6 class="ls_box_heading">Neck Style</h6>
+                                    <ul>
+                                        <li><input type="checkbox"
+                                                id="round_neck"> <label
+                                                for="round_neck">Round
+                                                Neck</label></li>
+                                        <li><input type="checkbox" id="v_neck">
+                                            <label
+                                                for="v_neck">V-Neck</label></li>
+                                        <li><input type="checkbox"
+                                                id="polo_neck"> <label
+                                                for="polo_neck">Polo
+                                                Neck</label></li>
+                                        <li><input type="checkbox"
+                                                id="collared"> <label
+                                                for="collared">Collared</label></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Fit Filter -->
+                                <div class="ls_fit_box ls__sub_box">
+                                    <h6 class="ls_box_heading">Fit</h6>
+                                    <ul>
+                                        <li><input type="checkbox"
+                                                id="slim_fit"> <label
+                                                for="slim_fit">Slim
+                                                Fit</label></li>
+                                        <li><input type="checkbox"
+                                                id="regular_fit"> <label
+                                                for="regular_fit">Regular
+                                                Fit</label></li>
+                                        <li><input type="checkbox"
+                                                id="loose_fit"> <label
+                                                for="loose_fit">Loose
+                                                Fit</label></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Customer Ratings Filter -->
+                                <div class="ls_rating_box ls__sub_box">
+                                    <h6 class="ls_box_heading">Customer
+                                        Ratings</h6>
+                                    <ul>
+                                        <li><input type="checkbox"
+                                                id="four_stars"> <label
+                                                for="four_stars">4 Stars &
+                                                Above</label></li>
+                                        <li><input type="checkbox"
+                                                id="three_stars"> <label
+                                                for="three_stars">3 Stars &
+                                                Above</label></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Discount Filter -->
+                                <div class="ls_discount_box ls__sub_box">
+                                    <h6 class="ls_box_heading">Discounts</h6>
+                                    <ul>
+                                        <li><input type="checkbox"
+                                                id="discounted"> <label
+                                                for="discounted">Discounted
+                                                Items</label></li>
+                                        <li><input type="checkbox" id="offers">
+                                            <label for="offers">Offers (e.g.,
+                                                Buy 1 Get 1, 20%
+                                                Off)</label></li>
+                                    </ul>
+                                </div>
+
+                                <!-- Seasonal Collection Filter -->
+                                <div class="ls_seasonal_box ls__sub_box">
+                                    <h6 class="ls_box_heading">Seasonal
+                                        Collections</h6>
+                                    <ul>
+                                        <li><input type="checkbox" id="summer">
+                                            <label for="summer">Summer
+                                                Collection</label></li>
+                                        <li><input type="checkbox" id="winter">
+                                            <label for="winter">Winter
+                                                Collection</label></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="products__card__main__row">
+                                <div class="row">
+                                    <div class="col-md-4 col-6">
+                                        <div class="product__card__main">
+                                            <div class="product__img">
+                                                <img src="assets/img/catergory/1.png" class="img-fluid" alt="product-img">
+                                            </div>
+                                            <div class="product__details">
+                                                <ul>
+                                                    <li class="product_name__">Mans Bestselling t Shirt </li>
+                                                    <li class="product_collection__type">Mans Collection</li>
+                                                    <li class="product_color_avaiable">
+                                                        <ul>
+                                                            <li>Color</li>
+                                                            <li>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>   
+                                                     <li class="product_size_avaiable">
+                                                        <ul>
+                                                            <li>Size :
+                                                                </li>
+                                                            <li>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="product_price_">
+                                                        <ul>
+                                                            <li>Price :</li>
+                                                            <li>
+                                                                <span> ₹ 499/-</span>
+                                                                <span> ₹ 999/-</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="product__buy">
+                                                        <ul>
+                                                            <li>Add to cart</li>
+                                                            <li>Buy Now</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-6">
+                                        <div class="product__card__main">
+                                            <div class="product__img">
+                                                <img src="assets/img/newest-addition/7.png" class="img-fluid" alt="product-img">
+                                            </div>
+                                            <div class="product__details">
+                                                <ul>
+                                                    <li class="product_name__">Mans Bestselling t Shirt </li>
+                                                    <li class="product_collection__type">Mans Collection</li>
+                                                    <li class="product_color_avaiable">
+                                                        <ul>
+                                                            <li>Color</li>
+                                                            <li>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>   
+                                                     <li class="product_size_avaiable">
+                                                        <ul>
+                                                            <li>Size :
+                                                                </li>
+                                                            <li>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="product_price_">
+                                                        <ul>
+                                                            <li>Price :</li>
+                                                            <li>
+                                                                <span> ₹ 499/-</span>
+                                                                <span> ₹ 999/-</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="product__buy">
+                                                        <ul>
+                                                            <li>Add to cart</li>
+                                                            <li>Buy Now</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-6">
+                                        <div class="product__card__main">
+                                            <div class="product__img">
+                                                <img src="assets/img/newest-addition/6.png" class="img-fluid" alt="product-img">
+                                            </div>
+                                            <div class="product__details">
+                                                <ul>
+                                                    <li class="product_name__">Mans Bestselling t Shirt </li>
+                                                    <li class="product_collection__type">Mans Collection</li>
+                                                    <li class="product_color_avaiable">
+                                                        <ul>
+                                                            <li>Color</li>
+                                                            <li>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>   
+                                                    <li class="product_size_avaiable">
+                                                        <ul>
+                                                            <li>Size :
+                                                                </li>
+                                                            <li>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="product_price_">
+                                                        <ul>
+                                                            <li>Price :</li>
+                                                            <li>
+                                                                <span> ₹ 499/-</span>
+                                                                <span> ₹ 999/-</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="product__buy">
+                                                        <ul>
+                                                            <li>Add to cart</li>
+                                                            <li>Buy Now</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-6">
+                                        <div class="product__card__main">
+                                            <div class="product__img">
+                                                <img src="assets/img/newest-addition/5.png "class="img-fluid" alt="product-img">
+                                            </div>
+                                            <div class="product__details">
+                                                <ul>
+                                                    <li class="product_name__">Mans Bestselling t Shirt </li>
+                                                    <li class="product_collection__type">Mans Collection</li>
+                                                    <li class="product_color_avaiable">
+                                                        <ul>
+                                                            <li>Color</li>
+                                                            <li>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>   
+                                                     <li class="product_size_avaiable">
+                                                        <ul>
+                                                            <li>Size :
+                                                                </li>
+                                                            <li>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="product_price_">
+                                                        <ul>
+                                                            <li>Price :</li>
+                                                            <li>
+                                                                <span> ₹ 499/-</span>
+                                                                <span> ₹ 999/-</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="product__buy">
+                                                        <ul>
+                                                            <li>Add to cart</li>
+                                                            <li>Buy Now</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-6">
+                                        <div class="product__card__main">
+                                            <div class="product__img">
+                                                <img src="assets/img/newest-addition/4.png" class="img-fluid" alt="product-img">
+                                            </div>
+                                            <div class="product__details">
+                                                <ul>
+                                                    <li class="product_name__">Mans Bestselling t Shirt </li>
+                                                    <li class="product_collection__type">Mans Collection</li>
+                                                    <li class="product_color_avaiable">
+                                                        <ul>
+                                                            <li>Color</li>
+                                                            <li>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>   
+                                                     <li class="product_size_avaiable">
+                                                        <ul>
+                                                            <li>Size :
+                                                                </li>
+                                                            <li>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="product_price_">
+                                                        <ul>
+                                                            <li>Price :</li>
+                                                            <li>
+                                                                <span> ₹ 499/-</span>
+                                                                <span> ₹ 999/-</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="product__buy">
+                                                        <ul>
+                                                            <li>Add to cart</li>
+                                                            <li>Buy Now</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-6">
+                                        <div class="product__card__main">
+                                            <div class="product__img">
+                                                <img src="assets/img/newest-addition/3.png" class="img-fluid" alt="product-img">
+                                            </div>
+                                            <div class="product__details">
+                                                <ul>
+                                                    <li class="product_name__">Mans Bestselling t Shirt </li>
+                                                    <li class="product_collection__type">Mans Collection</li>
+                                                    <li class="product_color_avaiable">
+                                                        <ul>
+                                                            <li>Color</li>
+                                                            <li>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>   
+                                                     <li class="product_size_avaiable">
+                                                        <ul>
+                                                            <li>Size :
+                                                                </li>
+                                                            <li>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="product_price_">
+                                                        <ul>
+                                                            <li>Price :</li>
+                                                            <li>
+                                                                <span> ₹ 499/-</span>
+                                                                <span> ₹ 999/-</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="product__buy">
+                                                        <ul>
+                                                            <li>Add to cart</li>
+                                                            <li>Buy Now</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-6">
+                                        <div class="product__card__main">
+                                            <div class="product__img">
+                                                <img src="assets/img/newest-addition/2.png" class="img-fluid" alt="product-img">
+                                            </div>
+                                            <div class="product__details">
+                                                <ul>
+                                                    <li class="product_name__">Mans Bestselling t Shirt </li>
+                                                    <li class="product_collection__type">Mans Collection</li>
+                                                    <li class="product_color_avaiable">
+                                                        <ul>
+                                                            <li>Color</li>
+                                                            <li>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>   
+                                                     <li class="product_size_avaiable">
+                                                        <ul>
+                                                            <li>Size :
+                                                                </li>
+                                                            <li>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="product_price_">
+                                                        <ul>
+                                                            <li>Price :</li>
+                                                            <li>
+                                                                <span> ₹ 499/-</span>
+                                                                <span> ₹ 999/-</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="product__buy">
+                                                        <ul>
+                                                            <li>Add to cart</li>
+                                                            <li>Buy Now</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-6">
+                                        <div class="product__card__main">
+                                            <div class="product__img">
+                                                <img src="assets/img/newest-addition/1.png" class="img-fluid" alt="product-img">
+                                            </div>
+                                            <div class="product__details">
+                                                <ul>
+                                                    <li class="product_name__">Mans Bestselling t Shirt </li>
+                                                    <li class="product_collection__type">Mans Collection</li>
+                                                    <li class="product_color_avaiable">
+                                                        <ul>
+                                                            <li>Color</li>
+                                                            <li>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>   
+                                                     <li class="product_size_avaiable">
+                                                        <ul>
+                                                            <li>Size :
+                                                                </li>
+                                                            <li>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="product_price_">
+                                                        <ul>
+                                                            <li>Price :</li>
+                                                            <li>
+                                                                <span> ₹ 499/-</span>
+                                                                <span> ₹ 999/-</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="product__buy">
+                                                        <ul>
+                                                            <li>Add to cart</li>
+                                                            <li>Buy Now</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-6">
+                                        <div class="product__card__main">
+                                            <div class="product__img">
+                                                <img src="assets/img/catergory/2.png" class="img-fluid" alt="product-img">
+                                            </div>
+                                            <div class="product__details">
+                                                <ul>
+                                                    <li class="product_name__">Mans Bestselling t Shirt </li>
+                                                    <li class="product_collection__type">Mans Collection</li>
+                                                    <li class="product_color_avaiable">
+                                                        <ul>
+                                                            <li>Color</li>
+                                                            <li>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                                <span><i class="fa-solid fa-circle"></i></span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>   
+                                                     <li class="product_size_avaiable">
+                                                        <ul>
+                                                            <li>Size :
+                                                                </li>
+                                                            <li>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                                <span>XS</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="product_price_">
+                                                        <ul>
+                                                            <li>Price :</li>
+                                                            <li>
+                                                                <span> ₹ 499/-</span>
+                                                                <span> ₹ 999/-</span>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="product__buy">
+                                                        <ul>
+                                                            <li>Add to cart</li>
+                                                            <li>Buy Now</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+         <!-- footer -->
+         <footer class="main__footer">
+            <div class="container">
+              <div class="footer__first_row">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="footer__sub__box">
+                                    <div class="footer_logo">
+                                        <img src="assets/img/logo-2.png"
+                                            class="img-fluid" alt="logo-tandix">
+                                        <p>Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit.
+                                            Quaerat veniam itaque nihil ipsum!
+                                            Corrupti consequuntur reiciendis in?
+                                            In, fugit tenetur amet provident
+                                            dolorum reprehenderit earum
+                                            doloremque inventore adipisci
+                                            accusantium itaque!</p>
+                                        <ul class="footer__icons">
+                                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="footer__sub__box">
+                                    <h5>Important Links</h5>
+                                    <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Shop</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            
+                            <div class="col-md-4">
+                                <div class="footer__sub__box">
+                                    <h5>Categories </h5>
+                                    <ul>
+                                        <li><a href="#">Men's T-Shirts</a></li>
+                                        <li><a href="#">Women's T-Shirts</a></li>
+                                        <li><a href="#">Both/Unisex</a></li>
+                                        <li><a href="#">New Arrivals</a></li>
+                                        <li><a href="#">Best Sellers</a></li>
+                                        <li><a href="#">Seasonal Items</a></li>
+                                        <li><a href="#">Sale/Offers</a></li>
+                                      </ul>
+                                      
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="footer__sub__box">
+                                    <h5>Customer Service </h5>
+                                    <ul>
+                                        <li><a href="#">Help Center</a></li>
+                                        <li><a href="#">FAQs</a></li>
+                                        <li><a href="#">Shipping & Delivery</a></li>
+                                        <li><a href="#">Returns & Exchanges</a></li>
+                                        <li><a href="#">Size Guide</a></li>
+                                        <li><a href="#">Track Your Order</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                      </ul>
+                                      
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="footer__sub__box px-4">
+                                    <h5>More </h5>
+                                    <ul >
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Terms of Service</a></li>
+                                        <li><a href="#">Cookie Policy</a></li>
+                                      </ul>
+                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+               <div class="footer__last_row">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="footer_last_sub">
+                            <p>All rights reseverd by trandix </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer_last_sub">
+                            <ul>
+                                <li><span><i
+                                            class="fa-brands fa-paypal"></i></span></li>
+                                <li><span><i
+                                            class="fa-brands fa-google-pay"></i></span></li>
+                                <li><span><i
+                                            class="fa-brands fa-apple-pay"></i></span></li>
+                                <li><span><i
+                                            class="fa-brands fa-amazon-pay"></i></span></li>
+                                <li><span></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </footer>
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/bootstrap.js"></script>
+    </body>
+</html>
